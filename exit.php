@@ -1,7 +1,10 @@
 <?php
+declare(strict_types=1);
+session_start();
 
-$_SESSION['login'] = 0;
-if ($_SESSION['login'] === 0) {
-    header('Location: /index.php');
+if (session_destroy()) {
+   // header('Location: /index.php');
+    header('Refresh: 2;url=index.php');
+} else {
+    echo 'Сессия не очистилась.';
 }
-exit();
