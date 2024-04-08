@@ -6,6 +6,6 @@ if (empty($_SESSION['login'])) {
     include 'formSite.php';
 } else{
     echo 'Привет ' . $_SESSION['login'] . '!<br/>';
-  //  require 'exit.php';
-  //  header('Refresh: 2;url=exit.php');
+    echo "<a href='exit.php'><button type='submit'>Выйти</button></a>";
+  
 }
